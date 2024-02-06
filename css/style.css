@@ -1,0 +1,23 @@
+/*
+** IUT PROJECT, 2023
+** VCOD S4
+** File description:
+** style.css
+*/
+
+header {
+    background-color: black;
+    text-align: center;
+    text-decoration-color: white;
+    color:white;
+}
+
+div {
+    background-color: lightgrey;
+    color: black;
+}
+
+footer {
+    background-color: lightgrey;
+    color: black;
+}
