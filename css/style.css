@@ -12,9 +12,18 @@ header {
     color:white;
 }
 
-div {
+.temps {
+    width: 100%;
+    display: flex;
+    flex-direction: row;;
     background-color: lightgrey;
     color: black;
+}
+.temps div {
+    width: 33%;
+}
+.temps h2 {
+    width: 100%;
 }
 
 footer {
