@@ -2,12 +2,37 @@
 <html>
     <link rel="stylesheet" href="../css/style.css">
     <head>
+        <script>
+            function afficheVille() {
+                // 1. Récupération de la valeur courante du select avec son id
+                let nomVilleChoisie = document.getElementById("choixVille").value
+                // 2. Récupération de la liste de toutes les div correspondant à une div de météo
+                // grâce à la classe « ville »
+                let villes = document.getElementsByClassName("")
+                // 3. Parcours de la liste des div météo. On cache celles non sélectionnées.
+                for (i=0; i<villes.length; i++) {
+                // l’attribut id de l’élément est comparée à la ville choisie
+                    if (villes[i].id == nomVilleChoisie) {
+                    // garder l'élément visible -> ELEMENT.style.display= "";
+                    villes[i].style.display="block";
+                    } else {
+                // cacher l'élément -> ELEMENT.style.display= "none";
+                        villes[i].style.display="none";
+                    }
+                }
+            }
+        </script>
         <meta charset="UTF-8">
     </head>
-    <body id="body">
+    <body id="body" onload="afficheVille()">
         <header class="title">
             <h1>TD n°1 Programmation Web - Application météo</h1>
         </header>
+        <select id="choixVille">
+            <option value="Niort">Niort</option>
+            <option value="Rio de Janeiro">Rio de Janeiro</option>
+            <option value="Reykjavik">Reykjavik</option>
+        </select>
         <div class="temps">
             <div class="pluie">
                 <h2>Niort</h2>
