@@ -2,49 +2,30 @@
 <html>
     <link rel="stylesheet" href="../css/style.css">
     <head>
-        <script>
-            function afficheVille() {
-                // 1. Récupération de la valeur courante du select avec son id
-                let nomVilleChoisie = document.getElementById("choixVille").value
-                // 2. Récupération de la liste de toutes les div correspondant à une div de météo
-                // grâce à la classe « ville »
-                let villes = document.getElementsByClassName("")
-                // 3. Parcours de la liste des div météo. On cache celles non sélectionnées.
-                for (i=0; i<villes.length; i++) {
-                // l’attribut id de l’élément est comparée à la ville choisie
-                    if (villes[i].id == nomVilleChoisie) {
-                    // garder l'élément visible -> ELEMENT.style.display= "";
-                    villes[i].style.display="block";
-                    } else {
-                // cacher l'élément -> ELEMENT.style.display= "none";
-                        villes[i].style.display="none";
-                    }
-                }
-            }
-        </script>
+        <script src="../javascript/ville.js"></script>
         <meta charset="UTF-8">
     </head>
     <body id="body" onload="afficheVille()">
         <header class="title">
             <h1>TD n°1 Programmation Web - Application météo</h1>
         </header>
-        <select id="choixVille">
+        <select id="choixVille" onchange="afficheVille()">
             <option value="Niort">Niort</option>
             <option value="Rio de Janeiro">Rio de Janeiro</option>
             <option value="Reykjavik">Reykjavik</option>
         </select>
         <div class="temps">
-            <div class="pluie">
+            <div id="Niort" class="ville">
                 <h2>Niort</h2>
                 <p>12°, pluvieux</p>
                 <img src="../img/pluvieux.png" width="5%"/>
             </div>
-            <div class="orage">
+            <div id="Rio de Janeiro" class="ville">
                 <h2>Rio de Janeiro</h2>
                 <p>29°, orageux</p>
                 <img src="../img/orageux.png" width="5%"/>
             </div>
-            <div class="soleil">
+            <div id="Reykjavik" class="ville">
                 <h2>Reykjavik</h2>
                 <p>-10°, ensoleillé</p>
                 <img src="../img/ensoleille.png" width="5%"/>
