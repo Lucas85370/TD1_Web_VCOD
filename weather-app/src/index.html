@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <script src="app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Météo des Villes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Prévisions Météo</h1>
+    <label for="choixVille">Choisissez une ville:</label>
+    <select id="choixVille" onchange="afficheVille()">
+        <option value="niort">Niort</option>
+        <option value="paris">Paris</option>
+        <option value="lyon">Lyon</option>
+    </select>
+
+    <div id="weatherInfo" class="ville">
+        <h2>Météo à <span id="cityName"></span></h2>
+        <p id="temperature"></p>
+        <p id="description"></p>
+    </div>
+</body>
+</html>

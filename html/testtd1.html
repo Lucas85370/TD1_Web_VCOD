@@ -2,7 +2,7 @@
 <html>
     <link rel="stylesheet" href="../css/style.css">
     <head>
-        <script src="../javascript/ville.js"></script>
+        <script src="../javascript/test_ville.js"></script>
         <meta charset="UTF-8">
     </head>
     <body id="body" onload="afficheVille()">
@@ -11,29 +11,27 @@
         </header>
         <select id="choixVille" onchange="afficheVille()">
             <option value="Niort">Niort</option>
-            <option value="Rio de Janeiro">Rio de Janeiro</option>
+            <option value="Paris">Paris</option>
             <option value="Reykjavik">Reykjavik</option>
         </select>
         <div class="temps">
             <div id="Niort" class="ville">
                 <h2>Niort</h2>
-                <p>12°, pluvieux</p>
-                <img src="../image/pluvieux.png" width="5%"/>
+                <p id="Niort-weather"></p>
+                <img id="Niort-icon" src="" width="5%"/>
             </div>
-            <div id="Rio de Janeiro" class="ville">
-                <h2>Rio de Janeiro</h2>
-                <p>29°, orageux</p>
-                <img src="../image/orageux.png" width="5%"/>
+            <div id="Paris" class="ville">
+                <h2>Paris</h2>
+                <p id="Paris"></p>
+                <img id="Paris-icon" src="" width="5%"/>
             </div>
             <div id="Reykjavik" class="ville">
                 <h2>Reykjavik</h2>
-                <p>-10°, ensoleillé</p>
-                <img src="../image/ensoleille.png" width="5%"/>
+                <p id="Reykjavik-weather"></p>
+                <img id="Reykjavik-icon" src="" width="5%"/>
             </div>
         </div>
     </body>
     <footer>
-        <p>François Garnier</p>
-        <p>Icônes météo par <a href="https://www.example.com">The Noum Project</a></p>
     </footer>
 </html>

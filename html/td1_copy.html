@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/javascript/app.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <label for="choixVille">Choose a city:</label>
+        <select id="choixVille">
+            <option value="Niort">Niort</option>
+            <option value="Rio de Janeiro">Rio de Janeiro</option>
+            <option value="Reykjavik">Reykjavik</option>
+        </select>
+        <button id="fetchWeather">Get Weather</button>
+
+        <div id="weatherInfo" class="ville">
+            <h2>Weather Information</h2>
+            <p id="cityName"></p>
+            <p id="temperature"></p>
+            <p id="description"></p>
+        </div>
+    </div>
+</body>
+</html>
